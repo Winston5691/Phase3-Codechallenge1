@@ -7,16 +7,11 @@ end
 
 ###  WRITE YOUR TEST CODE HERE ###
 
- article1=Article.new('Toms',"Frieds",'News Letter')
- tom=Article.new('Toms B','Garfied','Mag News')
+Winston=Magazine.new("Daily news","The peoples") 
+Kenyan=Magazine.new("Standard newspaper magazine", "Daily nation magazine")
 
-fried=Author.new("Frieds")
-garfied=Author.new('Garfied')
-
-letter=Magazine.new('News Letter',"Startard News")
-mag=Magazine.new("Mag News1","Startard news2")
-
-
+Walibora=Article.new("Tumbo lishibalo","Mstahiki Meya", "Kidagaa")
+Shakespear=Article.new("The commedy of errors","The winter's tale","Romeo and Juliet")
 
 
 
