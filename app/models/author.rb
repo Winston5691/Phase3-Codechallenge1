@@ -1,22 +1,31 @@
+require_relative "article"
+
 class Author
   attr_reader :name
+  @@all=[]
+
+
   def initialize(name)
     @name = name
+    @@all << self
+  
   end
-
+  def name
+    @name
+  end
+  def self.all
+    @all
+  end
   def articles
-    Article.all.select { |article| article.author == self }
-  end
+    Article.all.select{|article|article.author==self}
 
+  end
   def magazines
-    articles.collect { |article| article.magazine }.uniq
+    articles.map{|article|article.magazine.name}.uniq
   end
-
-  def add_article(magazine, title)
-    Article.new(title, magazine, self)
-  end
-
   def topic_areas
-    magazines.collect { |magazine| magazine.category }.uniq
+
   end
+  def add_article(magazine, title)
+
 end
